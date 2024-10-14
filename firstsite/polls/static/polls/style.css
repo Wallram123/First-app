@@ -1,10 +1,31 @@
 li a {
-    color: green;
+    color: rgb(249, 249, 249);
+    border: double 2px rgb(5, 42, 136);
+    padding: 15px;
+    display: block; 
+    text-align: center; 
+    border-radius: 10px; 
+    
 }
 
-body {
-    background: white url("images/background.png") no-repeat;
+li a:hover {
+    background-color: rgba(0, 36, 153, 0.421); 
 }
+li::marker {
+    content:none;
+}
+body {
+    
+        background-image: url("fiskmasar.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+    }
+    
+div#question_list {
+    display:flex;
+}
+
 
 
 

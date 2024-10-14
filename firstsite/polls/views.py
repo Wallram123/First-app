@@ -5,7 +5,15 @@ from django.views import generic
 from django.utils import timezone
 
 from .models import Choice, Question
+from django.shortcuts import render
 
+def view_page(request):
+    return render(request, 'polls/view.html')
+
+
+def all_questions(request):
+    questions = Question.objects.all()
+    return render(request, 'polls/view.html', {'questions': questions})
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
